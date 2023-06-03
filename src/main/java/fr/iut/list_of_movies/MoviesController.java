@@ -71,7 +71,7 @@ public class MoviesController implements Initializable {
         String path = fileChooser.showOpenDialog(import_btn.getScene().getWindow()).getAbsolutePath();
         List<List<String>> records = buffer(path);
         ObservableList<Movie> data = table_view.getItems();
-        for (int i = 1; i < records.size(); i++) {
+        for (int i = 2; i < records.size(); i++) {
             List<String> record = records.get(i);
             Integer rang = Integer.parseInt(record.get(0));
             String id = record.get(1);
